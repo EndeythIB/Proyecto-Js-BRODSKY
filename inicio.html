@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Libritos Shop</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="inicioStyle.css">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!"><img class="loguito" src="img/libropng.jpg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Libritos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Acerca de</a></li>
+                    </ul>
+                    <form class="nd-flex">
+                        <div id="navButton" class="navButton">
+                            
+                            <button id="botoncito" class="btn btn-outline-dark">Agregar item</button>
+
+                        
+                            <button id="registro" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalRegistrarse">
+                                Registrarse
+                              </button>
+                            
+                            <button id="carrito" class="btn btn-outline-dark" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                Carrito
+                                <span id="numero" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4">LIBRITOS</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">NUEVOS LIBROS AL ALCANCE DE TU MANO</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div id="newItem" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <!-- acá se agregan los elementos predeterminados y nuevos-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Modal Registrase -->
+<div class="modal fade" id="modalRegistrarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"></div>
+            <div class="boxModal" action="" method="post">
+
+                <h1>REGISTRATE</h1>
+                <input type="text" name="" placeholder="Nombre">
+                <input type="text" name="" placeholder="Apellido">
+                <input type="text" name="" placeholder="Username">
+                <input type="password" name="" placeholder="Password">
+                <button id="listo" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>LISTO</li></button>
+        
+            </div>
+    </div>
+  </div>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Libritos 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="creator.js"></script>
+        <script type="module" src="cuentas.js"></script>
+        
+        
+    </body>
+</html>
