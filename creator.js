@@ -42,7 +42,7 @@ botoncito.onclick = function(event) {
 const libro1 = new Tarjetas("IT", 1700, "https://imagessl3.casadellibro.com/a/l/t7/93/9788497593793.jpg");
 const libro2 = new Tarjetas("Carrie", 1200, "https://4.bp.blogspot.com/-Z-InNV4zRCE/VsC6_aGQ_kI/AAAAAAAAHJg/-eoCnu0nbGk/s1600/carrie_stephen_king.png");
 const libro3 = new Tarjetas("Alta cocina", 2800, "https://media.ambito.com/p/1722aa28a404faff2cb40fd6064b2015/adjuntos/239/imagenes/038/387/0038387178/el-dipyjpg.jpg");
-const libro4 = new Tarjetas("Programación para tontos", 1700, "https://www.escuelapedia.com/wp-content/uploads/Nerds.jpg");
+const libro4 = new Tarjetas("Programación para tontos", 1700, "https://http2.mlstatic.com/D_NQ_NP_922100-MCO26409858580_112017-O.jpg");
 const libro5 = new Tarjetas("No te frustres con Js", 8000, "https://media.cdn.eldestapeweb.com/eldestape/072021/1626727843790/Mirtha-Legrand-preocupada-cuidar.jpg?&cw=600&ch=365");
 const libro6 = new Tarjetas("Programar en SCUMM", 200, "https://topesdegama.com/app/uploads-topesdegama.com/2017/12/ScummVM-1.jpg");
 const libro7 = new Tarjetas("Animales peligrosos", 1700, "https://otakukart.com/wp-content/uploads/2021/05/Pokemon-2019-Episode-68-Cover.jpg");
