@@ -1,3 +1,5 @@
+
+
 class Usuarios {
     constructor(nombre, apellido, usuario, contraseña) {
         this.nombre = nombre;
@@ -21,12 +23,15 @@ const modalRegistrarse = document.getElementById("modalRegistrarse");
 
 
 
+
+
+
 function guest() {
 //No podes ver el carrito ni agregar nuevos items.
 carrito.style.display = "none";
 btnAgregar.style.display = "none";
 alert(`${localStorage.getItem("usuario")}, entraste como usuario invitado, si deseas realizar una compra, deberás registrarte.`);
-
+localStorage.setItem("modo", "guest");
 }
 
 function modoCliente() {
@@ -34,11 +39,13 @@ function modoCliente() {
 alert(`${localStorage.getItem("usuario")}, bienvenido al modo cliente, ahora puedes mandar productos al carrito para continuar con tu compra!.`);
 registro.style.display = "none";
 carrito.style.display = "block";
+localStorage.setItem("modo", "cliente");
 }
 
 function modoAdmin() {
 registro.style.display = "none";
 carrito.style.display = "none";
+localStorage.setItem("modo", "admin");
 alert("modo admin");
 
 

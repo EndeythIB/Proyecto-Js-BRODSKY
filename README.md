@@ -3,12 +3,10 @@
 <section class="consigna">
 <h2>Consigna</h2>
 
-<p>Traslada al proyecto integrador el concepto de objetos, visto en la clase de hoy. En función del tipo de simulador que hayas elegido deberás:</p>
+<p>Asociar eventos que buscamos controlar sobre los elementos de la interfaz de nuestro simulador, interactuar entre los elementos HTML y JS:</p>
 
 <ul>
-	<li>Crear elementos manipulando el DOM a partir de la información de tus objetos.</li>
-	<li>Modificar etiquetas existentes en función del resultado de operaciones</li>
-
+	<li>Capturar datos y agregar los elementos al DOM mediante JS.</li>
 </ul>
 </section>
 <section class="introduccion">

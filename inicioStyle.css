@@ -2501,6 +2501,15 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+.btnAcerca {
+  text-decoration: none;
+  color: #000
+}
+
+.btnAcerca:hover {
+  color: #000;
+}
+
 .form-range {
   width: 100%;
   height: 1.5rem;
@@ -4269,6 +4278,7 @@ textarea.form-control-lg {
 }
 
 .card {
+  margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4280,6 +4290,11 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   width: 250px;
   max-height: 320px;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.25s;
+
 }
 .card > hr {
   margin-right: 0;
@@ -10864,4 +10879,14 @@ textarea.form-control-lg {
 .loguito {
   height: 90px;
   width: 100px;
+}
+
+.about-in {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  align-items: center;
+  justify-items: center;
 }
