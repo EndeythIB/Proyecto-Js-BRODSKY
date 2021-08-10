@@ -11,7 +11,7 @@
 </section>
 <section class="introduccion">
 <h2>Mi trabajo</h2>
-<p>Este proyecto, tal como pide la consigna, recupera la entrega anterior y añade elementos al documento a través de la manipulación del DOM. En breve presentaré dónde se encuentran pero no sin antes hacer una breve descripción del proyecto en general.</p>
+<p>Este proyecto, tal como pide la consigna, recupera la entrega anterior y hace uso de diversos eventos y sus distintos metoso. En breve presentaré dónde se encuentran pero no sin antes hacer una breve descripción del proyecto en general.</p>
 
 
 </section>
@@ -29,7 +29,7 @@
 
 </section class="DOM">
 <h3>Manipulación del DOM</h3>
-<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM que pide la consigna</p>
+<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM</p>
 
 <ul>
 	<li>En <i>index.html</i>, si se escribe "admin" en el input, aparecerá un nuevo input de tipo password.</li>
@@ -40,6 +40,15 @@
 	<li>Hay manipulación de etiqueta ya existente en el HTML cada vez que se agrega un item al carrito, puesto a que genera que el número que ya estaba establecido aumente.</li>
 	<li>Si se hace click en el boton de carrito se ven listados los items agregados al mismo y el monto total a pagar</li>
 
+</ul>
+
+</section>
+
+</section class="Eventos">
+<h3>Incorporación de eventos</h3>
+
+<ul>
+	<li>Se recurre a varios metodos presentados en clase, solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse solo para designar cierto comportamiento en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
 </ul>
 
 </section>
