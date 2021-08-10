@@ -27,6 +27,17 @@
 
 </section>
 
+</section>
+
+</section class="Eventos">
+<h3>Incorporación de eventos</h3>
+
+<ul>
+	<li>Se recurre a varios metodos presentados en clase, solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse solo para designar cierto comportamiento en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
+</ul>
+
+</section>
+
 </section class="DOM">
 <h3>Manipulación del DOM</h3>
 <p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM</p>
@@ -42,16 +53,7 @@
 
 </ul>
 
-</section>
 
-</section class="Eventos">
-<h3>Incorporación de eventos</h3>
-
-<ul>
-	<li>Se recurre a varios metodos presentados en clase, solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse solo para designar cierto comportamiento en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
-</ul>
-
-</section>
 <section class="extra">
 	<h3>Datos de interés</h3>
 	<ul>
