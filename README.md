@@ -33,7 +33,7 @@
 <h3>Incorporación de eventos</h3>
 
 <ul>
-	<li>Se recurre a varios metodos presentados en clase, solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse solo para designar cierto comportamiento en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
+	<li>Se recurre a varios metodos presentados en clase, tan solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse para designar ciertos comportamientos en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados.</li>
 </ul>
 
 </section>
