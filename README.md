@@ -3,7 +3,7 @@
 <section class="consigna">
 <h2>Preentrega del proyecto final</h2>
 
-<a href="#instrucciones"><h1>AQUI LAS INSTRUCCIONES DE USO (invito a que prueben la función agregar items en modo admin)</h1></a>
+<h1>LEER LAS INSTRUCCIONES DE USO (invito a que prueben la función agregar items en modo admin)</h1>
 
 </section>
 
