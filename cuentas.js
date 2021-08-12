@@ -1,5 +1,3 @@
-
-
 class Usuarios {
     constructor(nombre, apellido, usuario, contraseña) {
         this.nombre = nombre;
@@ -20,6 +18,7 @@ const navButton = document.getElementById("navButton");
 const registro = document.getElementById("registro");
 const listo = document.getElementById("listo");
 const modalRegistrarse = document.getElementById("modalRegistrarse");
+const welcome = document.getElementById("welcome");
 
 
 
@@ -28,36 +27,40 @@ const modalRegistrarse = document.getElementById("modalRegistrarse");
 
 function guest() {
 //No podes ver el carrito ni agregar nuevos items.
+welcome.innerHTML = `(${localStorage.getItem("usuario")}, estas en modo invitado. Regístrate para comprar)`;
 carrito.style.display = "none";
 btnAgregar.style.display = "none";
-alert(`${localStorage.getItem("usuario")}, entraste como usuario invitado, si deseas realizar una compra, deberás registrarte.`);
 localStorage.setItem("modo", "guest");
 }
 
 function modoCliente() {
 //Ves el carrito pero no podes agregar items.
-alert(`${localStorage.getItem("usuario")}, bienvenido al modo cliente, ahora puedes mandar productos al carrito para continuar con tu compra!.`);
+welcome.innerHTML = `(Bienvenido ${localStorage.getItem("usuario")}, puedes ver tus compras en el carrito aqui)`;
+btnAgregar.style.display = "none";
 registro.style.display = "none";
 carrito.style.display = "block";
 localStorage.setItem("modo", "cliente");
 }
 
 function modoAdmin() {
+welcome.innerHTML = `(Bienvenido señor, sientase libre de agregar los items que desee con este hermoso botón)`;
 registro.style.display = "none";
 carrito.style.display = "none";
 localStorage.setItem("modo", "admin");
-alert("modo admin");
-
 
 }
 
-if (localStorage.getItem("usuario") == "admin") {
-    modoAdmin()
-} else {
+if (localStorage.getItem("modo") == "admin") {
+    modoAdmin();
+} else if (localStorage.getItem("modo") == "guest"){
     guest();
+
+} else {
+    modoCliente();
 }
 
-listo.onclick = function(e){
-    e.preventDefault();
+listo.onclick = function(){
+
     modoCliente();
+    window.location.href = "inicio.html";
 }

@@ -1,24 +1,16 @@
 # libritos
 
 <section class="consigna">
-<h2>Consigna</h2>
+<h2>Preentrega del proyecto final</h2>
 
-<p>Asociar eventos que buscamos controlar sobre los elementos de la interfaz de nuestro simulador, interactuar entre los elementos HTML y JS:</p>
-
-<ul>
-	<li>Capturar datos y agregar los elementos al DOM mediante JS.</li>
-</ul>
-</section>
-<section class="introduccion">
-<h2>Mi trabajo</h2>
-<p>Este proyecto, tal como pide la consigna, recupera la entrega anterior y hace uso de diversos eventos y sus distintos metoso. En breve presentaré dónde se encuentran pero no sin antes hacer una breve descripción del proyecto en general.</p>
-
+<a href="#instrucciones"><h1>AQUI LAS INSTRUCCIONES DE USO (invito a que prueben la función agregar items en modo admin)</h1></a>
 
 </section>
+
 
 <section class="trabajo">
 	<h3>Visión general del proyecto</h3>
-	<p>Esta entrega simula ser una librería virtual que es capaz de distinguir tres tipos de usuarios que cuentan con distintos privilegios:</p>
+	<p>Este proyecto simula ser una librería virtual que es capaz de distinguir tres tipos de usuarios que cuentan con distintos privilegios:</p>
 	<ol>
 		<li>Admin: puede agregar nuevos productos al sitio. Para ello cuenta con el botón "Agregar item" en la barra de navegación.</li>
 		<li>Cliente: puede agregar artículos al carrito y luego visualizarlos con el botón que aparece en la barra de navegación.</li>
@@ -29,7 +21,7 @@
 
 </section class="DOM">
 <h3>Manipulación del DOM</h3>
-<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM</p>
+<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM. Cabe aclarar, que estos son solo algunos, en realidad hay muchos más.</p>
 
 <ul>
 	<li>En <i>index.html</i>, si se escribe "admin" en el input, aparecerá un nuevo input de tipo password.</li>
@@ -48,20 +40,35 @@
 <h3>Incorporación de eventos</h3>
 
 <ul>
-	<li>Se recurre a varios metodos presentados en clase, solo en el archivo <i>ecommerce.js</i> se puede encontrar addEventListener, eventos de teclado y eventos del mouse solo para designar cierto comportamiento en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
+	<li>Se recurre a varios metodos presentados en clase, tan solo en el archivo <i>ecommerce.js</i> ya se pueden encontrar addEventListener, eventos de teclado y eventos del mouse para designar ciertos comportamientos en el login en el caso de que el usuario clickee o en su defecto utilice la tecla "ENTER" para confirmar los datos brindados </li>
 </ul>
 
 </section>
+
+<section>
+	<h3>Novedades</h3>
+	<ul>
+		<li>Se reemplazaron todos los alerts y prompts por manipulación de DOM</li>
+		<li>Se creó la opciónde eliminar items agregados al carrito.</li>
+		<li>Se agregó botón to top para volver a la parte superior del sitio</li>
+		<li>Se emprolijaron ciertas características y elementos en el html</li>
+		<li></li>
+	</ul>
+</section>
+
+
 <section class="extra">
 	<h3>Datos de interés</h3>
 	<ul>
 		<li>Para almacenar el nombre de usuario y acceder al mismo en los dos documentos html se recurre al localStorage</li>
 		<li>EL archivo <i>inicio.html</i> es un fork propio de esta <a href="https://startbootstrap.com/template/shop-homepage">plantilla bootstrap</a>.
 </section>
-<section class="instrucciones">
+<section id="instrucciones" class="instrucciones">
 <h2>Instrucciones de uso</h2>
 <p>A continuación se detallará de qué manera poder acceder al sitio en cada uno de los modos de usuario:</p>
 <ol><li>Modo admin: El usuario deberá loguearse en index.html con el nombre de usuario "admin" y la contraseña "123"</li>
+	<h3>Como agregar un nuevo producto</h3>
+	<p>Para agregar un nuevo producto (función especial del modo admin) simplemente se debe hacer click en el boton "Agregar item" lo cual desplegará tres imputs, nombre, precio, url de imagen, una vez completados estos campos con la información deseada, apretar el botón "Agregar", cabe destacar que cualquier url que se utilice va a funcionar de manera correcta en este proyecto.</p>
 	<li>Modo invitado: El usuario deberá loguearse con cualquier nombre de usuario que no sea "admin"</li>
 	<li>Modo cliente: El usuario deberá loguearse como invitado y luego registrarse.</li>
 </section>

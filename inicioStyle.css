@@ -10890,3 +10890,8 @@ textarea.form-control-lg {
   align-items: center;
   justify-items: center;
 }
+
+.carrito-botones {
+  display: flex;
+  gap: 20px;
+}

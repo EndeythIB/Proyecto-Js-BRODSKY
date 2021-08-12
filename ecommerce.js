@@ -10,6 +10,7 @@ export let nombreInvitado;
 function login() {
   if (texto.value == "admin") {
     chkAdmin();
+    
   } else {
     localStorage.setItem("usuario", texto.value);
     cliente();
@@ -37,7 +38,7 @@ boton.onclick = function () {
 
 
 function cliente() {
-
+  localStorage.setItem("modo", "guest");
   window.location.href = "inicio.html";
 }
 
@@ -46,6 +47,7 @@ function cliente() {
 function admin() {
  
   localStorage.setItem("usuario", "admin");
+  localStorage.setItem("modo", "admin");
   window.location.href = "inicio.html";
 
 
