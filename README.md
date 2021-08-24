@@ -1,9 +1,11 @@
 # libritos
 
 <section class="consigna">
-<h2>Preentrega del proyecto final</h2>
+<h2>JQuery: Selectores y eventos</h2>
 
-<h1>LEER LAS INSTRUCCIONES DE USO (invito a que prueben la función agregar items en modo admin)</h1>
+<p>Este ejercicio se ve aplicado en los documentos cuentas.js y creator.js</p>
+
+<h1>INSTRUCCIONES DE USO ABAJO DE TODO (invito a que prueben la función agregar items en modo admin)</h1>
 
 </section>
 
@@ -19,9 +21,22 @@
 
 </section>
 
+<section class="selectores_eventos">
+	<h3>Selectoes y eventos con jQuery</h3>
+	<p>Se recure a jQuery para:</p>
+		<ul>
+			<li>Se crean elementos en el DOM tales como el logo de la página, la imagen dentro de "Acerca de" y el BOTON SECRETO</li>
+			<li>Se le asignan escuchadores de eventos a dichos elementos y sus respuestas correspondientes</li>
+			<li></li>
+		</ul>
+
+
+
+</section>
+
 </section class="DOM">
-<h3>Manipulación del DOM</h3>
-<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM. Cabe aclarar, que estos son solo algunos, en realidad hay muchos más.</p>
+	<h3>Manipulación del DOM</h3>
+	<p>A continuación se mostrarán los principales aspectos de este proyecto que cuentan con la manipulación del DOM. Cabe aclarar, que estos son solo algunos, en realidad hay muchos más.</p>
 
 <ul>
 	<li>En <i>index.html</i>, si se escribe "admin" en el input, aparecerá un nuevo input de tipo password.</li>
@@ -63,6 +78,7 @@
 		<li>Para almacenar el nombre de usuario y acceder al mismo en los dos documentos html se recurre al localStorage</li>
 		<li>EL archivo <i>inicio.html</i> es un fork propio de esta <a href="https://startbootstrap.com/template/shop-homepage">plantilla bootstrap</a>.
 </section>
+
 <section id="instrucciones" class="instrucciones">
 <h2>Instrucciones de uso</h2>
 <p>A continuación se detallará de qué manera poder acceder al sitio en cada uno de los modos de usuario:</p>

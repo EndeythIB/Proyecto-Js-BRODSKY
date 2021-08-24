@@ -17,13 +17,13 @@
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!"><img class="loguito" src="img/libropng.jpg" alt=""></a>
+            <div class="container px-4 px-lg-5 jqPractice">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><button class="btn btn-outline-transparent" aria-current="page" href="#!">Libritos</button></li>
                         <li class="nav-item"><button class="btn btn-outline-transparent"><a class="btnAcerca" href="inicio.html#acercaDe"> Acerca de</a></button></li>
+                        <div class="headCont"></div>
                     </ul>
                     <form class="nd-flex">
                         <div id="navButton" class="navButton">
@@ -57,6 +57,7 @@
                 </div>
             </div>
         </header>
+        
         <!-- Section-->
         <section class="py-5">
             <div class="px-4 px-lg-5 mt-5">
@@ -70,14 +71,14 @@
 <!-- Modal Registrase -->
 <div class="modal fade" id="modalRegistrarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog"></div>
-            <div class="boxModal" action="" method="post">
+            <div class="bmRegistro" action="" method="post">
 
                 <h1>REGISTRATE</h1>
-                <input type="text" name="" placeholder="Nombre">
-                <input type="text" name="" placeholder="Apellido">
-                <input type="text" name="" placeholder="Username">
-                <input type="password" name="" placeholder="Password">
-                <button id="listo" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>LISTO</li></button>
+                <input id="regNombre" type="text" name="" placeholder="Nombre">
+                <input id="regApellido" type="text" name="" placeholder="Apellido">
+                <input id="regUsername" type="text" name="" placeholder="Username">
+                <input id="regContraseña" type="password" name="" placeholder="Password">
+                <button id="listo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target="#oferta"><li>LISTO</li></button>
         
             </div>
     </div>
@@ -107,7 +108,7 @@
             <div class="about-in">
                 <div class="izq">
                     <h2 class="display-4 h2-center">Acerca de nosotros</h2>
-                    <img class="imgAbout" src="img/librin.png">
+                    <div class="imgAbt"></div>
                     <h4 class="h4-center">lorm impsum curi curi inc<h4>
             </div>
             <div class="der">
@@ -117,22 +118,56 @@
     </div>
 </section>
 
+<div class="modal fade" id="oferta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"></div>
+            <div id="bodyOferta" class="bmOferta" action="" method="post">
+
+                <h1>OFERTA</h1>
+
+                <div id="contenidoCarrito" class="contenido-carrito"></div>
+                <p>Si consigues clickear en nuestro libro escurridizo 📖 obtendrás <span style="font-weight: bold;">100% de descuento</span> en tu próxima compra</p>
+                    <div class=carrito-botones>
+                        <button id="done" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>OK</li></button>
+                    </div>
+            </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mentira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"></div>
+            <div id="bodyOferta" class="bmOferta" action="" method="post">
+
+                <h1>CAISTE</h1>
+
+                <div id="contenidoCarrito" class="contenido-carrito"></div>
+                <p>Me extraña araña que siendo mosca no me conozcas, si queres cosas gratis este no es tu lugar jeje</p>
+                    <div class=carrito-botones>
+                        <button id="aceptarFracaso" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>HDP</li></button>
+                    </div>
+            </div>
+    </div>
+  </div>
+
+
 <div class="botonArriba">
     <button id="topBtn" onclick="topFunction()" class="btnArriba"><h3><!--<i class="bi bi-arrow-up"></i>--></h2>▲</button>
 </div>
 
         <!-- Footer-->
         <footer class="py-5 bg-white">
-            <div class="container"><p class="m-0 text-center text-dark">Copyright &copy; Libritos 2021</p></div>
+            <div class="container">
+                <p class="m-0 text-center text-dark">Copyright &copy; Libritos 2021</p>
+            </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
         <script type="module" src="creator.js"></script>
         <script type="module" src="cuentas.js"></script>
         <script src="topBtn.js"></script>
-        
-        
-        
+
+
     </body>
 </html>

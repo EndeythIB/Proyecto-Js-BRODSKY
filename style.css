@@ -218,3 +218,106 @@ h1 {
   .h4-center {
       text-align: center;
   }
+
+.bmRegistro{
+    min-width: 300px;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    text-align: center;
+}
+
+.bmRegistro h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bmRegistro input[type = "text"], .bmRegistro input[type= "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #b70e21;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
+
+.bmRegistro input[type = "text"]:focus, .bmRegistro input[type= "password"]:focus {
+
+    width: 220px;
+    border-color: #ff6348;
+    
+}
+
+.bmRegistro .botonModal{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ff6348;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bmRegistro .botonModal:hover{
+    background: #ff6348;
+
+}
+
+.bmOferta{
+    min-width: 300px;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    text-align: center;
+}
+
+.bmOferta h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bmOferta p {
+    color: white;
+}
+
+.bmOferta .botonModal{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ff6348;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bmOferta .botonModal:hover{
+    background: #ff6348;
+
+}

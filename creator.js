@@ -29,6 +29,40 @@ class Tarjetas {
     }
 }
 
+//Imagenes logo/acercaDe insert and events -BOTON SECRETO-
+
+$('.jqPractice').prepend("<a class='navbar-brand' href='#!''><img class='loguito' src='img/libropng.jpg' alt=''></a>");
+
+$('.loguito').click(function(){
+    $('.loguito').fadeOut('slow', function() {
+        $(".loguito").fadeIn(1000);
+    });
+})
+
+$('.imgAbt').prepend("<a href='#!'><img class='imgAbout' src='img/librin.png'></a>");
+
+$(".imgAbout").click(function(){
+    $('.imgAbout').fadeOut('slow', function() {
+        $(".imgAbout").fadeIn(1000);
+    })
+})
+
+$('.headCont').prepend("<button type='button' data-bs-toggle='modal' data-bs-target='#mentira' class='secretBtn btn'>📖</button>");
+
+$('.secretBtn').css({"position" : "absolute"})
+
+$('.secretBtn').on('mouseenter',function(e){
+    let maxX = $(".jqPractice").width() - $(this).width();
+    let maxY = $(".jqPractice").height() - $(this).height();
+    $(this).css({
+        'left':getRandomInt(0, maxX),
+        'top':getRandomInt(0, maxY)
+    });
+});
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 //Form que va a ser agregado en la función dentro de botoncito.onclick
 
 const form = document.createElement("FORM");

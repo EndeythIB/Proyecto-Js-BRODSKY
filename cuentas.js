@@ -1,13 +1,4 @@
-class Usuarios {
-    constructor(nombre, apellido, usuario, contraseña) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.usuario = usuario;
-    }
-}
-
-const clienteEjemplo = new Usuarios("Joaquín", "Salvatierra", "joacodinamita", "123");
-const admin = new Usuarios("admin", "admin", "admin", "123");
+// const admin = new Usuarios("admin", "admin", "admin", "123");
 
 //HTML
 const carrito = document.getElementById("carrito");
@@ -31,6 +22,7 @@ welcome.innerHTML = `(${localStorage.getItem("usuario")}, estas en modo invitado
 carrito.style.display = "none";
 btnAgregar.style.display = "none";
 localStorage.setItem("modo", "guest");
+$(".secretBtn").hide();
 }
 
 function modoCliente() {
@@ -40,6 +32,7 @@ btnAgregar.style.display = "none";
 registro.style.display = "none";
 carrito.style.display = "block";
 localStorage.setItem("modo", "cliente");
+$(".secretBtn").show();
 }
 
 function modoAdmin() {
@@ -47,7 +40,7 @@ welcome.innerHTML = `(Bienvenido señor, sientase libre de agregar los items que
 registro.style.display = "none";
 carrito.style.display = "none";
 localStorage.setItem("modo", "admin");
-
+$(".secretBtn").hide();
 }
 
 if (localStorage.getItem("modo") == "admin") {
@@ -62,5 +55,9 @@ if (localStorage.getItem("modo") == "admin") {
 listo.onclick = function(){
 
     modoCliente();
-    window.location.href = "inicio.html";
+    
 }
+
+$("#done").click(function() {
+    window.location.href = "inicio.html";
+})
