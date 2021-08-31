@@ -12,6 +12,8 @@ bodyCarrito.style.backgroundColor = "black";
 bodyCarrito.style.borderRadius = "25px";
 const vaciar = document.getElementById("vaciar");
 const comprar = document.getElementById("comprar");
+const modalCatalogo = document.getElementById("divCatalogo");
+
 
 
 class Tarjetas {
@@ -80,7 +82,18 @@ inUrl.placeholder = "URL imagen deseada";
 const addProducto = document.createElement("BUTTON");
 addProducto.innerHTML = "Agregar";
 addProducto.classList.add("btn","btn-light");
+const addError = document.createElement("DIV")
+addError.classList.add("alerta-error");
+header.appendChild(addError);
+const reto = document.createElement("P");
+reto.style.color = "red";
+reto.style.textAlign = "center";
+reto.style.paddingTop = "50px";
 
+
+reto.innerHTML = "(DEBES LLENAR TODOS LOS CAMPOS)"
+addError.appendChild(reto);
+$(".alerta-error").hide();
 //Variables de productos
 
 let titulo
@@ -108,9 +121,21 @@ addProducto.onclick = function() {
     titulo = inProducto.value;
     precio = inPrecio.value;
     imagen = inUrl.value;
+  
+    if (titulo == "" || precio == "" || imagen == "") {
+        header.appendChild(addError);
+        addError.appendChild(reto);
+        $(".alerta-error").show(0, function(){
+            $(".alerta-error").delay(2500);
+            $(".alerta-error").hide(0);
+        });
+        
+    } else {
     let producto = new Tarjetas(titulo, precio, imagen);
     productosActivos.push(producto);
+    
     listar();
+}
 }
 
 //Productos predeterminados
@@ -257,3 +282,26 @@ comprar.onclick = function(e){
         parrafoCarrito.innerHTML = `${(localStorage.getItem("usuario"))}, felicidades por tu compra k-po`
 }
 }
+
+//AJAX - JSON
+
+const URLJSON = "catalogo.json"
+let limite = 0;
+
+$('.headCont').append("<button id='botonJson' type='button' class='btn btn-outline-dark' data-bs-toggle='modal' data-bs-target='#modalCatalogo'>CATALOGO</button>");
+
+$("#botonJson").click(() => { 
+    $.getJSON(URLJSON, function (respuesta, estado) {
+        if(estado === "success" && limite == 0){
+          let misDatos = respuesta;
+          for (const dato of misDatos) {
+        let tituloCatalogo = document.createElement("P");
+        tituloCatalogo.style.color = "white";
+        tituloCatalogo.innerHTML = dato.titulo;
+        divCatalogo.appendChild(tituloCatalogo);
+        limite++;
+          }  
+        }
+        });
+    });
+    

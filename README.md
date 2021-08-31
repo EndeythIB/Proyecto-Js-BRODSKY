@@ -1,9 +1,17 @@
 # libritos
 
 <section class="consigna">
-<h2>JQuery: Selectores y eventos</h2>
+<h2>Tercer entrega Proyecto Final</h2>
 
-<p>Este ejercicio se ve aplicado en los documentos cuentas.js y creator.js</p>
+<p>Se corrigen algunos aspectos mencionados en la entrega anterior, tales como agregar item sin elementos en modo admin, se agrega botón catalogo a modo de prueba y para cumplir con el desafío de la clase 14 (este se mejorará para la entrega final del proyecto)</p>
+
+<h2>Cosas pendientes de agregar para la entrega final del proyecto</h2>
+<ul>
+<li>Slide en pantalla principal</li>
+<li>Mejorar la experiencia de usuario (vamos a desechar index.html y trabajar el login solo en la página principal</li>
+<li>Filtros de busqueda</li>
+<li>Conslutas de información por producto</li>
+</ul>
 
 <h1>INSTRUCCIONES DE USO ABAJO DE TODO (invito a que prueben la función agregar items en modo admin)</h1>
 
@@ -21,17 +29,22 @@
 
 </section>
 
+<section class="AJAX">
+	<h3>AJAX con jQuery</h3>
+	<p>Este ejercicio se ve aplicado en los documentos creator.js y catalogo.json.</p>
+	<p>Mediante AJAX se consulta el archivo catalogo.json a traves de el botón "catalogo" desplegando un modal con los titulos disponibles en el sitio.</p>
+	<h2>Aclaración</h2>
+	<p>Para la entrega final del proyecto esto se va a trabajar de manera mas profunda, de momento solo se agrego la funcionalidad para cumplir con el objetivo del desafio planteado en la clase 14</p>
+</section>
+
 <section class="selectores_eventos">
 	<h3>Selectoes y eventos con jQuery</h3>
 	<p>Se recure a jQuery para:</p>
+	<p>Para visualizar el "BOTON SECRETO" se debe entrar al modo cliente completando el registro</p>
 		<ul>
 			<li>Se crean elementos en el DOM tales como el logo de la página, la imagen dentro de "Acerca de" y el BOTON SECRETO</li>
 			<li>Se le asignan escuchadores de eventos a dichos elementos y sus respuestas correspondientes</li>
-			<li></li>
 		</ul>
-
-
-
 </section>
 
 </section class="DOM">
@@ -48,7 +61,6 @@
 	<li>Si se hace click en el boton de carrito se ven listados los items agregados al mismo y el monto total a pagar</li>
 
 </ul>
-
 </section>
 
 </section class="Eventos">
@@ -67,7 +79,6 @@
 		<li>Se creó la opciónde eliminar items agregados al carrito.</li>
 		<li>Se agregó botón to top para volver a la parte superior del sitio</li>
 		<li>Se emprolijaron ciertas características y elementos en el html</li>
-		<li></li>
 	</ul>
 </section>
 

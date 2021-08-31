@@ -10,6 +10,7 @@ const registro = document.getElementById("registro");
 const listo = document.getElementById("listo");
 const modalRegistrarse = document.getElementById("modalRegistrarse");
 const welcome = document.getElementById("welcome");
+const catalogo = document.getElementById("botonJson");
 
 
 
@@ -29,15 +30,18 @@ function modoCliente() {
 //Ves el carrito pero no podes agregar items.
 welcome.innerHTML = `(Bienvenido ${localStorage.getItem("usuario")}, puedes ver tus compras en el carrito aqui)`;
 btnAgregar.style.display = "none";
+catalogo.style.display = "none";
 registro.style.display = "none";
 carrito.style.display = "block";
 localStorage.setItem("modo", "cliente");
+
 $(".secretBtn").show();
 }
 
 function modoAdmin() {
 welcome.innerHTML = `(Bienvenido señor, sientase libre de agregar los items que desee con este hermoso botón)`;
 registro.style.display = "none";
+catalogo.style.display = "none";
 carrito.style.display = "none";
 localStorage.setItem("modo", "admin");
 $(".secretBtn").hide();
