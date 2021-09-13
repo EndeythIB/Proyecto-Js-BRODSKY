@@ -4,6 +4,8 @@ const tarjeta = document.createElement("DIV");
 const numero = document.getElementById("numero");
 const carrito = document.getElementById("carrito");
 const header = document.getElementById("header");
+
+//modal-carrito
 const contenidoCarrito = document.getElementById("contenidoCarrito");
 const parrafoCarrito = document.createElement("P");
 parrafoCarrito.style.color = "white";
@@ -12,7 +14,38 @@ bodyCarrito.style.backgroundColor = "black";
 bodyCarrito.style.borderRadius = "25px";
 const vaciar = document.getElementById("vaciar");
 const comprar = document.getElementById("comprar");
+
+//boton-catalogo
 const modalCatalogo = document.getElementById("divCatalogo");
+
+//preview-card
+const preview = document.getElementById("preview");
+
+// let item = document.createElement("DIV");
+//         item.classList.add("col", "mb-5");
+//         nuevoItem.appendChild(item);
+//         let card = document.createElement("DIV");
+//         card.classList.add("card", "h-100");
+//         card.style.boxShadow = "0px 5px 5px 0 rgba(0, 0, 0, 0.6)";  
+//         item.appendChild(card);
+//         let imagen = document.createElement("IMG");
+//         imagen.classList.add("card-img-top");
+//         imagen.src = productosActivos[i].imagen;
+//         card.appendChild(imagen);
+//         let cardBody = document.createElement("DIV");
+//         cardBody.classList.add("card-body", "p-4");
+//         card.appendChild(cardBody);
+//         let cardText = document.createElement("DIV");
+//         cardText.classList.add("text-center");
+//         cardBody.appendChild(cardText);
+//         let cardTitulo = document.createElement("H5");
+//         cardTitulo.classList.add("fw-bolder");
+//         cardTitulo.innerHTML = productosActivos[i].titulo;
+//         cardText.appendChild(cardTitulo);
+//         let cardPrecio = document.createElement("P");
+//         cardPrecio.classList.add("fw-regular");
+//         cardPrecio.innerHTML = `$${productosActivos[i].precio}`;
+//         cardText.appendChild(cardPrecio);
 
 
 
@@ -75,10 +108,13 @@ form.style.gap = "20px";
 form.style.marginTop = "40px";
 const inProducto = document.createElement("INPUT");
 inProducto.placeholder = "Nombre del producto";
+inProducto.classList.add("form-control");
 const inPrecio = document.createElement("INPUT");
 inPrecio.placeholder = "Precio del producto";
+inPrecio.classList.add("form-control");
 const inUrl = document.createElement("INPUT");
 inUrl.placeholder = "URL imagen deseada";
+inUrl.classList.add("form-control");
 const addProducto = document.createElement("BUTTON");
 addProducto.innerHTML = "Agregar";
 addProducto.classList.add("btn","btn-light");
@@ -107,6 +143,7 @@ botoncito.onclick = function() {
     form.appendChild(inPrecio);
     form.appendChild(inUrl);
     form.appendChild(addProducto);
+    
 
     /*let titulo = prompt("titulo del producto:");
     let precio = prompt("precio:");
@@ -153,7 +190,7 @@ const libro10 = new Tarjetas("Como mover el bote", 820, "https://nick-intl.mtvni
 const libro11 = new Tarjetas("Diario de una Pasión", 2400, "https://caraotadigital.org/wp-content/uploads/2020/08/Lo-mejor-de-dos-milanesas-de-pollo-rellenas-de-pure-de-papa-Video.jpg");
 const libro12 = new Tarjetas("Marketing avanzado", 1750, "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/apu-1582840418.jpeg?crop=1.00xw:0.835xh;0,0.0853xh&resize=1200:*");
 const libro13 = new Tarjetas("Malas ideas para un libro", 8900, "https://i.ibb.co/w7z9SqW/no-se.png");
-const libro14 = new Tarjetas("YO NO SE LEER", 9780, "https://pbs.twimg.com/media/EcnmYjVXoAAPXw4.jpg");
+const libro14 = new Tarjetas("YO NO SE LEER", 9780, "https://i.pinimg.com/736x/f0/5d/b6/f05db68d54cfbfb01dabfed24c5ddaba.jpg");
 const libro15 = new Tarjetas("Guia rapida a CS 1.6", 680, "https://highxtar.com/wp-content/uploads/2020/06/thumb-counter-strike-1.6.jpg");
 const libro16 = new Tarjetas("Tecnicas de depilación", 3900, "https://api.time.com/wp-content/uploads/2016/12/chewbacca-sings-silent-night.jpg?w=824&quality=70");
 let productosActivos = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8, libro9, libro10, libro11, libro12, libro13, libro14, libro15, libro16];
@@ -279,9 +316,10 @@ comprar.onclick = function(e){
     if (addCarrito.length == 0) {
         parrafoCarrito.innerHTML = "QUE QUERES COMPRAR SI NO AGREGASTE NADA MAESTR@";
     } else {
-        parrafoCarrito.innerHTML = `${(localStorage.getItem("usuario"))}, felicidades por tu compra k-po`
+        parrafoCarrito.innerHTML = `${(localStorage.getItem("user"))}, felicidades por tu compra k-po`
 }
 }
+
 
 //AJAX - JSON
 
@@ -305,3 +343,6 @@ $("#botonJson").click(() => {
         });
     });
     
+
+
+//Agregar item Preview
