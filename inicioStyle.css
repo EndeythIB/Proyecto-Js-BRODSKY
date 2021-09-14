@@ -668,10 +668,10 @@ progress {
   width: 100%;
 }
 
-.row-cols-2 > * {
+/* .row-cols-2 > * {
   flex: 0 0 auto;
   width: 50%;
-}
+} */
 
 .row-cols-3 > * {
   flex: 0 0 auto;
@@ -10887,11 +10887,49 @@ textarea.form-control-lg {
 .about-in {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.about-in h2 {
+text-align: center;
+}
+
+.about-in img {
+  width: 200px;
+}
+
+@media (min-width: 1024px) {
+  .about-in {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
-  align-items: center;
-  justify-items: center;
+}
+}
+
+
+@media (max-width: 549px) {
+  .about-in {
+    display: block;
+   
+    column-gap: 20px;
+  }
+
+#newItem {
+  display: block;
+  text-align: center;
+}
+
+  .row {
+    display: block;
+  }
+  
+  .card {
+  width: 60%;
+  height: 140%;
+    
+  }
 }
 
 .carrito-botones {

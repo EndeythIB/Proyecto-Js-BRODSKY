@@ -99,25 +99,30 @@ function getRandomInt(min, max) {
 }
 
 //Form que va a ser agregado en la función dentro de botoncito.onclick
-
 const form = document.createElement("FORM");
 form.classList.add("form");
 form.style.display = "flex";
 form.style.justifyContent = "center";
 form.style.gap = "20px";
 form.style.marginTop = "40px";
-const inProducto = document.createElement("INPUT");
+const inProducto = document.createElement("INPUT"); 
 inProducto.placeholder = "Nombre del producto";
 inProducto.classList.add("form-control");
 const inPrecio = document.createElement("INPUT");
 inPrecio.placeholder = "Precio del producto";
+inPrecio.setAttribute("type", "number");
 inPrecio.classList.add("form-control");
 const inUrl = document.createElement("INPUT");
 inUrl.placeholder = "URL imagen deseada";
+inUrl.setAttribute("type", "url");
 inUrl.classList.add("form-control");
 const addProducto = document.createElement("BUTTON");
 addProducto.innerHTML = "Agregar";
 addProducto.classList.add("btn","btn-light");
+const resetProducto = document.createElement("BUTTON");
+resetProducto.innerHTML = "Reset";
+resetProducto.setAttribute("type", "reset");
+resetProducto.classList.add("btn","btn-light");
 const addError = document.createElement("DIV")
 addError.classList.add("alerta-error");
 header.appendChild(addError);
@@ -126,6 +131,63 @@ reto.style.color = "red";
 reto.style.textAlign = "center";
 reto.style.paddingTop = "50px";
 
+// Preview IMG
+const addCard = document.createElement("DIV");
+addCard.classList.add("col", "mb-5", "addCard");
+addCard.style.paddingTop = "50px";
+let card = document.createElement("DIV");
+card.classList.add("card", "h-100");
+card.style.boxShadow = "0px 5px 5px 0 rgba(0, 0, 0, 0.6)";  
+addCard.appendChild(card);
+let imgCard = document.createElement("IMG");
+imgCard.classList.add("card-img-top");
+imgCard.src = ""
+imgCard.setAttribute("onerror", "this.src='https://cdn1.iconfinder.com/data/icons/rounded-black-basic-ui/139/Photo_Add-RoundedBlack-512.png'")
+card.appendChild(imgCard);
+let cardBody = document.createElement("DIV");
+cardBody.classList.add("card-body", "p-4");
+card.appendChild(cardBody);
+let cardText = document.createElement("DIV");
+cardText.classList.add("text-center");
+cardBody.appendChild(cardText);
+let cardTituloPrev = document.createElement("H5");
+cardTituloPrev.classList.add("fw-bolder");
+cardTituloPrev.innerHTML = "";
+cardText.appendChild(cardTituloPrev);
+let cardPrecioPrev = document.createElement("P");
+cardPrecioPrev.classList.add("fw-regular");
+cardPrecioPrev.innerHTML = "";
+cardText.appendChild(cardPrecioPrev);
+
+//listeners 
+
+inProducto.addEventListener("input", updateTitulo);
+inPrecio.addEventListener("input", updatePrecio);
+inUrl.addEventListener("input", updateImg);
+
+header.appendChild(addCard);
+$(".addCard").hide();
+
+function updateTitulo(e) {
+    header.appendChild(addCard);
+    $(".addCard").fadeIn(500);
+    cardTituloPrev.innerHTML = e.target.value;
+}
+
+function updatePrecio(e) {
+    header.appendChild(addCard);
+    $(".addCard").fadeIn(500);
+    cardPrecioPrev.innerHTML = "$" + e.target.value;
+}
+
+function updateImg(e) {
+    header.appendChild(addCard);
+    $(".addCard").fadeIn(500);
+    imgCard.src = e.target.value; 
+}
+
+header.appendChild(addCard);
+$(".addCard").hide();
 
 reto.innerHTML = "(DEBES LLENAR TODOS LOS CAMPOS)"
 addError.appendChild(reto);
@@ -136,6 +198,8 @@ let titulo
 let precio
 let imagen
 
+
+//NavButton Agregar Item
 botoncito.onclick = function() {
     event.preventDefault(event); //para evitar que se recargue la página
     header.appendChild(form);
@@ -143,16 +207,12 @@ botoncito.onclick = function() {
     form.appendChild(inPrecio);
     form.appendChild(inUrl);
     form.appendChild(addProducto);
-    
-
-    /*let titulo = prompt("titulo del producto:");
-    let precio = prompt("precio:");
-    let imagen = prompt ("Agregue link de imagen seleccionada");*/
-
-    
-
+    form.appendChild(resetProducto);
+    header.appendChild(addCard);
 }
 
+
+//FormButton Agregar
 addProducto.onclick = function() {
     event.preventDefault(event);
     titulo = inProducto.value;
@@ -161,6 +221,7 @@ addProducto.onclick = function() {
   
     if (titulo == "" || precio == "" || imagen == "") {
         header.appendChild(addError);
+        
         addError.appendChild(reto);
         $(".alerta-error").show(0, function(){
             $(".alerta-error").delay(2500);
@@ -172,7 +233,29 @@ addProducto.onclick = function() {
     productosActivos.push(producto);
     
     listar();
+
+    header.appendChild(addCard);
+    $(".addCard").hide(500)
+
+    inProducto.value = "";
+    inPrecio.value = "";
+    inUrl.value = "";
+    cardTituloPrev.innerHTML = "";
+    imgCard.src = "";
+    cardPrecioPrev.innerHTML = "";
 }
+}
+
+//FormButton Reset
+resetProducto.onclick = function() {
+    
+    $(".addCard").hide(500);
+    inProducto.value = "";
+    inPrecio.value = "";
+    inUrl.value = "";
+    cardTituloPrev.innerHTML = "";
+    imgCard.src = "";
+    cardPrecioPrev.innerHTML = "";
 }
 
 //Productos predeterminados
@@ -194,7 +277,6 @@ const libro14 = new Tarjetas("YO NO SE LEER", 9780, "https://i.pinimg.com/736x/f
 const libro15 = new Tarjetas("Guia rapida a CS 1.6", 680, "https://highxtar.com/wp-content/uploads/2020/06/thumb-counter-strike-1.6.jpg");
 const libro16 = new Tarjetas("Tecnicas de depilación", 3900, "https://api.time.com/wp-content/uploads/2016/12/chewbacca-sings-silent-night.jpg?w=824&quality=70");
 let productosActivos = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8, libro9, libro10, libro11, libro12, libro13, libro14, libro15, libro16];
-
 
 export function listar() {
     if (localStorage.getItem("modo") == "cliente") {
@@ -342,7 +424,3 @@ $("#botonJson").click(() => {
         }
         });
     });
-    
-
-
-//Agregar item Preview
