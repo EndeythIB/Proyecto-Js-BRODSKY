@@ -99,3 +99,5 @@
 	<li>Modo invitado: El usuario deberá loguearse con cualquier nombre de usuario que no sea "admin"</li>
 	<li>Modo cliente: El usuario deberá loguearse como invitado y luego registrarse.</li>
 </section>
+
+
