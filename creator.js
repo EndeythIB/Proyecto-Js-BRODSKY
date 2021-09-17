@@ -408,7 +408,7 @@ comprar.onclick = function(e){
 const URLJSON = "catalogo.json"
 let limite = 0;
 
-$('.headCont').append("<button id='botonJson' type='button' class='btn btn-outline-dark' data-bs-toggle='modal' data-bs-target='#modalCatalogo'>CATALOGO</button>");
+$('.headCont').append("<button id='botonJson' type='button' class='btn' data-bs-toggle='modal' data-bs-target='#modalCatalogo'>Catalogo</button>");
 
 $("#botonJson").click(() => { 
     $.getJSON(URLJSON, function (respuesta, estado) {
@@ -418,7 +418,7 @@ $("#botonJson").click(() => {
         let tituloCatalogo = document.createElement("P");
         tituloCatalogo.style.color = "white";
         tituloCatalogo.innerHTML = dato.titulo;
-        divCatalogo.appendChild(tituloCatalogo);
+        divCatalogo.prepend(tituloCatalogo);
         limite++;
           }  
         }
