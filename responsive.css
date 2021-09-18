@@ -1,83 +1,87 @@
 @media (min-width: 1024px) {
-    .about-in {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    }
+  .about-in {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
   }
-  
-  
-  
-  
-  @media (max-width: 1200px) {
-  
-    .navbar-nav{
-    display: flex;
-    }
-  
-  
-    .navbar {
-      display: block;
-      width: 100%;
-    }
-    
-    .navButton {
-      display: block;
-      width: 100%;
-    }
-    
-    .navButton .btn {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    
-    .navButton .nav-item {
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    /* .navbar-nav {
-      display: block;
-    } */
-    
-    .navbar-nav .btn {
-      width: 100%
-    }
-    
-    
-    .carrito-botones {
-      display: flex;
-      gap: 20px;
-    }
-  
-    .carousel-item img {
-      width: 100%;
-      height: auto;
-    } 
-  
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+  .navbar-nav{
+  display: flex;
   }
-  
-  @media (max-width: 549px) {
-    .about-in {
-      display: block;
-     
-      column-gap: 20px;
-  
-    }
-  
-    #newItem {
+
+
+  .navbar {
     display: block;
-    text-align: center;
-    }
+    width: 100%;
+  }
   
-    .row {
-      display: block;
-    }
-    
-    .card {
+  .navButton {
+    display: block;
+    width: 100%;
+  }
+  
+  .navButton .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .navButton .nav-item {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* .navbar-nav {
+    display: block;
+  } */
+  
+  .navbar-nav .btn {
+    width: 100%
+  }
+  
+  
+  .carrito-botones {
+    display: flex;
+    gap: 20px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-inner {
+    max-height: 145px;
+  }
+
+}
+
+@media (max-width: 549px) {
+  .about-in {
+    display: block;
+   
+    column-gap: 20px;
+
+  }
+
+  #newItem {
+  display: block;
+  text-align: center;
+  }
+
+  .row {
+    display: block;
+  }
+  
+  .card {
     width: 60%;
     height: 140%;
-      
-    }
     
   }
+  
+}
