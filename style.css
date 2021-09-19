@@ -372,3 +372,7 @@ input[type=number] {
 .carousel img {
     height: 600px;
 }
+
+.form {
+    display: flex;
+}

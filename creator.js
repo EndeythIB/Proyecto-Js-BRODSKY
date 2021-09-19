@@ -74,7 +74,7 @@ function getRandomInt(min, max) {
 //Form que va a ser agregado en la función dentro de botoncito.onclick
 const form = document.createElement("FORM");
 form.classList.add("form");
-form.style.display = "flex";
+// form.style.display = "flex";
 form.style.justifyContent = "center";
 form.style.gap = "20px";
 form.style.marginTop = "40px";
