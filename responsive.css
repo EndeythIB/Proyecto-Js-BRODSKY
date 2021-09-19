@@ -42,7 +42,7 @@
   
   
   .carrito-botones {
-    display: flex;
+    display: block;
     gap: 20px;
   }
 

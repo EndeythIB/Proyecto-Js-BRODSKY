@@ -129,6 +129,11 @@ h1 {
 
 }
 
+.carrito-botones {
+    display: flex;
+    gap: 20px;
+  }
+
 .boxModal input[type = "text"]:focus, .boxModal input[type= "password"]:focus {
 
     width: 220px;
