@@ -7,19 +7,23 @@ const navButton = document.getElementById("navButton");
 const registro = document.getElementById("registro");
 const login = document.getElementById("login");
 const modalRegistrarse = document.getElementById("modalRegistrarse");
+const okReg = document.getElementById("regOK");
 const welcome = document.getElementById("welcome");
 const catalogo = document.getElementById("botonJson");
 const cerrarS = document.getElementById("close");
 const regUsername = document.getElementById("regUsername");
 const regContraseña = document.getElementById("regContraseña");
+const regNombre = document.getElementById("regNombre");
+const regApellido = document.getElementById("regApellido");
 const regListo = document.getElementById("regListo");
 const logUsername = document.getElementById("logUsername");
 const logContraseña = document.getElementById("logContraseña");
 const listo = document.getElementById("listo");
-const loginModal = document.getElementById("modaLogin")
-const divErrorLogin = document.getElementById("divError")
+const loginModal = document.getElementById("modaLogin");
+const divErrorLogin = document.getElementById("divError");
+const divErrorReg = document.getElementById("regError");
 
-
+//error login
 const errorLogin = document.createElement("P");
 errorLogin.style.color = "red";
 errorLogin.style.textAlign = "center";
@@ -28,6 +32,16 @@ errorLogin.style.paddingTop = "5px";
 errorLogin.innerHTML = "INFORMACIÓN INCORRECTA"
 divErrorLogin.appendChild(errorLogin);
 $("#divError").hide();
+
+//error registro
+const errorReg = document.createElement("P");
+errorReg.style.color = "red";
+errorReg.style.textAlign = "center";
+errorReg.style.paddingTop = "5px";
+
+errorReg.innerHTML = "COMPLETE LOS CAMPOS"
+divErrorReg.appendChild(errorReg);
+$("#regError").hide();
 
 //setear admin
 localStorage.setItem("admin", "admin");
@@ -49,11 +63,27 @@ $(window).on('load', function() {
     }
 });
 
-
-regListo.onclick = function() {
-    localStorage.setItem("user", regUsername.value);
-    localStorage.setItem("pass", regContraseña.value);
+//Cambio entre modal registro y modal OKregistro
+function okRegShow() {
+    $("#modalRegistrarse").removeClass("fade").modal("hide");
+    $("#regOK").addClass("fade").modal("show");
 }
+
+//Modal registro funciones
+regListo.onclick = function() {
+     if (regUsername.value == "" && regContraseña.value == "") {
+         $(".error-reg").show(0, function(){
+             $(".error-reg").delay(2500);
+             $(".error-reg").hide(0);
+         });     
+        } else {
+         localStorage.setItem("user", regUsername.value);
+         localStorage.setItem("pass", regContraseña.value);
+         okRegShow();
+     }
+}
+
+//Modal inicioSesion funciones
 listo.onclick = function() {
     if (logUsername.value == localStorage.getItem("user") && logContraseña.value == localStorage.getItem("pass")) {
         modoCliente();
@@ -75,6 +105,8 @@ cerrarS.onclick = function() {
     location.reload();
 }
 
+
+//DIFERENTES MODOS USUARIO
 
 //Modo invitado
 function guest() {

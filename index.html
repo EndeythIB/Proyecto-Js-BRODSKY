@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- CSS stylesheet-->
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="bootstrap.css">
         <link rel="stylesheet" type="text/css" href="responsive.css">
@@ -28,29 +28,16 @@
                     </ul>
                     <form class="nd-flex">
                         <div id="navButton" class="navButton">
-                            
                             <p id="welcome" class="nav-item"></p>
-
                             <button id="botoncito" class="btn btn-outline-dark">Agregar item</button>
-
                             
-                            <button id="registro" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalRegistrarse">
-                                Registrarse
-                            </button>
-                            <button id="login" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modaLogin">
-                                Iniciar sesión
-                            </button>
+                            <button id="registro" type="button" class="btn btn-outline-dark" data-bs-toggle="modal"data-bs-target="#modalRegistrarse">Registrarse</button>
                             
+                            <button id="login" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modaLogin">Iniciar sesión</button>
                             
-                            <button id="carrito" class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito">
-                                <i class="bi-cart-fill me-1"></i>
-                                Carrito
-                                <span id="numero" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                            </button>
-                            <button id="close" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="">
-                                Cerrar sesión
-                            </button>
-
+                            <button id="carrito" class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i class="bi-cart-fill me-1"></i>Carrito<span id="numero" class="badge bg-dark text-white ms-1 rounded-pill">0</span></button>
+                            
+                            <button id="close" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="">Cerrar sesión</button>
                         </div>
                     </form>
                 </div>
@@ -90,140 +77,137 @@
             </div>
         </section>
 
-<!-- Modal Registrase -->
-<div class="modal fade" id="modalRegistrarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div class="bmRegistro" action="" method="post">
+        <!-- Modal Registrase -->
+        <div class="modal fade" id="modalRegistrarse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div class="bmRegistro" action="" method="post">
 
-                <h1>REGISTRATE</h1>
-                <input id="regNombre" type="text" name="" placeholder="Nombre">
-                <input id="regApellido" type="text" name="" placeholder="Apellido">
-                <input id="regUsername" type="text" name="" placeholder="Username">
-                <input id="regContraseña" type="password" name="" placeholder="Password">
-                <button id="regListo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target="#regOK"><li>LISTO</li></button>
-        
-            </div>
-    </div>
-  </div>
+                        <h1>REGISTRATE</h1>
+                        <form action="">
+                        <input id="regNombre" type="text" name="" placeholder="Nombre">
+                        <input id="regApellido" type="text" name="" placeholder="Apellido">
+                        <input id="regUsername" type="text" name="" placeholder="Username">
+                        <input id="regContraseña" type="password" name="" placeholder="Password">
+                        <div id="regError" class="error-reg"></div>
+                        <button type="reset" id="regListo" class="botonModal" data-bs-dismiss="" data-bs-target="#regOk" data-bs-toggle="modal" ><li>LISTO</li></button>
+                        </form>
 
-<!-- Modal Login-->
-<div class="modal fade" id="modaLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div class="bmRegistro" action="" method="post">
-
-                <h1>INICIAR SESION</h1>
-                <input id="logUsername" type="text" name="" placeholder="Username">
-                <input id="logContraseña" type="password" name="" placeholder="Password">
-                <div id="divError" class="alerta-error"></div>
-                <button id="listo" data-bs-dismiss="" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button>
-        
-            </div>
-    </div>
-  </div>
-
-<!-- Modal Carrito-->
-<div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div id="bodyCarrito" class="boxModal" action="" method="post">
-
-                <h1>TU CARRITO</h1>
-                <div id="contenidoCarrito" class="contenido-carrito"></div>
-
-                    <div class= "carrito-botones">
-                        <button id="vaciar" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>VACIAR</li></button>
-                        <button id="cancelar" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>CANCELAR</li></button>
-                        <button id="comprar" class="botonModal"><li>COMPRAR</li></button>
                     </div>
-            </div>
-    </div>
-  </div>
-
-<!-- Modal Catalogo -->
-<div class="modal fade" id="modalCatalogo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-    
-            <div class="bmRegistro bmCatalogo"  action="" method="post">
-                <div id="divCatalogo">
-
-                    <button id="listoCatalogo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button>
-                </div>
-              
-                <!-- <button id="listoCatalogo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button> -->
-       
-            </div>
-    </div>
-  </div>
-
-
-<!-- Acerca de -->
-<section id="acercaDe" name="acercaDe" class="about">
-    <div class="bg-dark px-4 px-lg-5">
-        <div class="text-white">
-            <div class="about-in">
-                <div class="izq">
-                    <h2 class="display-4 h2-center">Acerca de nosotros</h2>
-                    <div class="imgAbt"></div>
-                    <h4 class="h4-center">lorm impsum curi curi inc<h4>
-            </div>
-            <div class="der">
-                <p class="lead fw-normal text-white-50 mb-0 h2-justify">Lorem ipsum runt dignissimos  magni hic aliquid! Beatae, temporibus, sunt praesentium reprehenderit totam doloremque nostrum hic ipsam illo consectetur ad     assumenda aspernatur veritatis quibusdam debitis eligendi excepturi est, vitae doloribus quis sequi nobis. Asperiores totam     ea, quibusdam voluptates at necessitatibus, iste fugit voluptatem odit eum, natus quod id omnis placeat atque obcaecati     itaque. Eius, sequi. Fuga distinctio, velit optio quam consequuntur vitae temporibus facilis deserunt, repudiandae ea qui   doloremque quia officiis. Consequuntur qui, nihil voluptatibus quos voluptas dolores eveniet reprehenderit nobis quo alias    ab magnam est? Aliquam, quibusdam mollitia quas odio, iusto totam aut beatae expedita dignissimos impedit ad. Dolorum culpa    voluptas corporis! Esse unde explicabo quae, ratione rerum totam, vitae aut officiis molestiae, dignissimos iste fuga  quibusdam voluptate dolores laboriosam similique beatae at.</p>    </div>
-            </div>
         </div>
-    </div>
-</section>
 
-<!-- Modal Registro Ok -->
-<div class="modal fade" id="regOK" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div id="bodyOferta" class="bmOferta" action="" method="post">
+        <!-- Modal Login-->
+        <div class="modal fade" id="modaLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div class="bmRegistro" action="" method="post">
 
-                <h1>BIENVENIDO</h1>
-
-                <div id="contenidoCarrito" class="contenido-carrito"></div>
-                <p>Felicidades! te registraste con éxito, <span style="font-weight: bold;">INICIA SESION</span> para empezar a comprar 💪</p>
-                    <div class=carrito-botones>
-                        <button id="done" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>OK</li></button>
+                        <h1>INICIAR SESION</h1>
+                        <input id="logUsername" type="text" name="" placeholder="Username">
+                        <input id="logContraseña" type="password" name="" placeholder="Password">
+                        <div id="divError" class="alerta-error"></div>
+                        <button id="listo" data-bs-dismiss="" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button>
+                
                     </div>
-            </div>
-    </div>
-  </div>
+        </div>
 
+        <!-- Modal Carrito-->
+        <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div id="bodyCarrito" class="boxModal" action="" method="post">
 
-<!-- Modal oferta -->
-<div class="modal fade" id="oferta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div id="bodyOferta" class="bmOferta" action="" method="post">
+                        <h1>TU CARRITO</h1>
+                        <div id="contenidoCarrito" class="contenido-carrito"></div>
 
-                <h1>OFERTA</h1>
-
-                <div id="contenidoCarrito" class="contenido-carrito"></div>
-                <p>Si consigues clickear en nuestro libro escurridizo 📖 obtendrás <span style="font-weight: bold;">100% de descuento</span> en tu próxima compra</p>
-                    <div class=carrito-botones>
-                        <button id="done" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>OK</li></button>
+                            <div class= "carrito-botones">
+                                <button id="vaciar" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>VACIAR</li></button>
+                                <button id="cancelar" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>CANCELAR</li></button>
+                                <button id="comprar" class="botonModal"><li>COMPRAR</li></button>
+                            </div>
                     </div>
-            </div>
-    </div>
-  </div>
+        </div>
 
-  <div class="modal fade" id="mentira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog"></div>
-            <div id="bodyOferta" class="bmOferta" action="" method="post">
+        <!-- Modal Catalogo -->
+        <div class="modal fade" id="modalCatalogo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+            
+                    <div class="bmRegistro bmCatalogo"  action="" method="post">
+                        <div id="divCatalogo">
 
-                <h1>CAISTE</h1>
-
-                <div id="contenidoCarrito" class="contenido-carrito"></div>
-                <p>Me extraña araña que siendo mosca no me conozcas, si queres cosas gratis este no es tu lugar jeje</p>
-                    <div class=carrito-botones>
-                        <button id="aceptarFracaso" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>HDP</li></button>
+                            <button id="listoCatalogo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button>
+                        </div>
+                    
+                        <!-- <button id="listoCatalogo" data-bs-dismiss="modal" class="botonModal" data-bs-toggle="modal" data-bs-target=""><li>LISTO</li></button> -->
+            
                     </div>
+        </div>
+
+        <!-- Modal Registro Ok -->
+        <div class="modal" id="regOK" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div id="bodyOferta" class="bmOferta" action="" method="post">
+
+                        <h1>BIENVENIDO</h1>
+
+                        <div id="contenidoCarrito" class="contenido-carrito"></div>
+                        <p>Felicidades! te registraste con éxito, <span style="font-weight: bold;">INICIA SESION</span> para empezar a comprar 💪</p>
+                            <div class=carrito-botones>
+                                <button id="done" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>OK</li></button>
+                            </div>
+                    </div>
+        </div>
+
+        <!-- Modal oferta -->
+        <div class="modal fade" id="oferta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div id="bodyOferta" class="bmOferta" action="" method="post">
+
+                        <h1>OFERTA</h1>
+
+                        <div id="contenidoCarrito" class="contenido-carrito"></div>
+                        <p>Si consigues clickear en nuestro libro escurridizo <span style="font-size: 20px;">📖</span> obtendrás <span style="font-weight: bold;">100% de descuento</span> en tu próxima compra</p>
+                            <div class=carrito-botones>
+                                <button id="done" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>OK</li></button>
+                            </div>
+                    </div>
+        </div>
+
+        <!-- Modal broma -->
+        <div class="modal" id="mentira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+                    <div id="bodyOferta" class="bmOferta" action="" method="post">
+
+                        <h1>CAISTE</h1>
+
+                        <div id="contenidoCarrito" class="contenido-carrito"></div>
+                        <p>Me extraña araña que siendo mosca no me conozcas, si queres cosas gratis este no es tu lugar jeje</p>
+                            <div class=carrito-botones>
+                                <button id="aceptarFracaso" data-bs-dismiss="modal" data-dismiss="modal" class="botonModal"><li>oh god, why?</li></button>
+                            </div>
+                    </div>
+        </div>
+
+        <!-- Acerca de -->
+        <section id="acercaDe" name="acercaDe" class="about">
+            <div class="bg-dark px-4 px-lg-5">
+                <div class="text-white">
+                    <div class="about-in">
+                        <div class="izq">
+                            <h2 class="display-4 h2-center">Acerca de nosotros</h2>
+                            <div class="imgAbt"></div>
+                            <h4 class="h4-center">lorm impsum curi curi inc<h4>
+                    </div>
+                    <div class="der">
+                        <p class="lead fw-normal text-white-50 mb-0 h2-justify">Lorem ipsum runt dignissimos  magni hic aliquid! Beatae, temporibus, sunt praesentium reprehenderit totam doloremque nostrum hic ipsam illo consectetur ad     assumenda aspernatur veritatis quibusdam debitis eligendi excepturi est, vitae doloribus quis sequi nobis. Asperiores totam     ea, quibusdam voluptates at necessitatibus, iste fugit voluptatem odit eum, natus quod id omnis placeat atque obcaecati     itaque. Eius, sequi. Fuga distinctio, velit optio quam consequuntur vitae temporibus facilis deserunt, repudiandae ea qui   doloremque quia officiis. Consequuntur qui, nihil voluptatibus quos voluptas dolores eveniet reprehenderit nobis quo alias    ab magnam est? Aliquam, quibusdam mollitia quas odio, iusto totam aut beatae expedita dignissimos impedit ad. Dolorum culpa    voluptas corporis! Esse unde explicabo quae, ratione rerum totam, vitae aut officiis molestiae, dignissimos iste fuga  quibusdam voluptate dolores laboriosam similique beatae at.</p>    </div>
+                    </div>
+                </div>
             </div>
-    </div>
-  </div>
+        </section>
 
+        
 
-<div class="botonArriba">
-    <button id="topBtn" onclick="topFunction()" class="btnArriba"><h3><!--<i class="bi bi-arrow-up"></i>--></h2>▲</button>
-</div>
+        <!-- Boton para volver arriba -->
+        <div class="botonArriba">
+            <button id="topBtn" onclick="topFunction()" class="btnArriba"><h3><!--<i class="bi bi-arrow-up"></i>--></h2>▲</button>
+        </div>
 
         <!-- Footer-->
         <footer class="py-5 bg-white">
@@ -231,11 +215,13 @@
                 <p class="m-0 text-center text-dark">Copyright &copy; Libritos 2021</p>
             </div>
         </footer>
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Js files -->
         <script type="module" src="creator.js"></script>
         <script type="module" src="cuentas.js"></script>
         <script src="topBtn.js"></script>
